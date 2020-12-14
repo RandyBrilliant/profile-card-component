@@ -1,0 +1,142 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --desaturated-blue: hsl(229, 23%, 23%);
+  --gray-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--dark-cyan);
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  height: 100vh;
+  width: 100%;
+}
+
+h2,
+span,
+p {
+  font-size: 18px;
+}
+
+main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 340px;
+  height: 350px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  background-image: url(/images/bg-pattern-card.svg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+  flex: 0 0 35%;
+}
+
+.avatar-img {
+  border-radius: 50px;
+  border: 5px solid white;
+  position: relative;
+  top: 60%;
+}
+
+.card-content {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.age {
+  font-weight: bold;
+  color: var(--gray-blue);
+  margin-left: 5px;
+}
+
+.location {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+.card-footer {
+  border-top: 1px solid var(--dark-gray);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status {
+  width: 100%;
+}
+
+.status-list {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.status-detail {
+  font-size: 18px;
+  margin-right: 15px;
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+legend {
+  font-weight: lighter;
+  letter-spacing: 0.1rem;
+  color: var(--dark-gray);
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 290px;
+    height: 330px;
+  }
+
+  .card-content {
+    margin-top: 70px;
+  }
+}
